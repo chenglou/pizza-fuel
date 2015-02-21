@@ -3,96 +3,88 @@ var App = React.createClass({
     var s = {
       width: 450,
       height: 150,
-      outline: '1px solid black',
-    };
-
-    var bar = {
-      height: 25,
-      width: 450,
-      top: 125,
-      outline: '1px solid black',
+      border: '1px solid rgba(0, 0, 0, .08)',
+      backgroundColor: '#f6f7f8',
     };
 
     var url = {
       height: 25,
-      width: 100,
-      left: 325,
-      outline: '1px solid black',
+      width: 125,
+      left: 300,
       lineHeight: '27px',
       textAlign: 'right',
     };
 
     var arrow = {
-      height: 25,
-      width: 20,
-      left: 430,
-      outline: '1px solid black',
-      lineHeight: '30px',
+      borderTop: '1px solid #ccc',
     };
 
     var info = {
       height: 124,
-      width: 125,
-      left: 325,
-      outline: '1px solid black',
+      width: 150,
+      left: 300,
     };
 
     var gallery = {
       height: 124,
-      width: 324,
-      outline: '1px solid black',
-      overflow: 'hidden',
+      outline: '1px solid #CCC',
+      overflowX: 'scroll',
+      overflowY: 'hidden',
     };
 
-    var name = {
-      outline: '1px solid black',
-      width: 125,
-      height: 25,
-      top: 0,
-      lineHeight: '30px',
+    var list = {
+      paddingLeft: '8px',
+      paddingRight: '5px',
+      paddingTop: '4px',
+      paddingBottom: '6px',
+      borderColor: '#ccc',
     };
 
-    var rating = {
-      outline: '1px solid black',
-      width: 125,
-      height: 25,
-      top: 25,
-      lineHeight: '30px',
+    var lefthalf = {
+      width: '60%',
+      position: 'relative',
+      minHeight: '1px',
+      float: 'left',
     };
 
-    var opening = {
-      outline: '1px solid black',
-      width: 125,
-      height: 25,
-      top: 50,
-      lineHeight: '30px',
+    var righthalf = {
+      width: '40%',
+      position: 'relative',
+      minHeight: '1px',
+      float: 'right',
     };
 
-    var phone = {
-      outline: '1px solid black',
-      width: 125,
-      height: 25,
-      top: 75,
-      lineHeight: '30px',
+
+    var photo = {
+      position: 'relative',
+      height: 124,
+      display: 'inline-block',
     };
 
     return (
       <div style={s}>
-        <div style={gallery}>
-          <img src="food.jpg" alt="" width="500" height="325" />
+        <div style={lefthalf}>
+          <div style={gallery}>
+            <table>
+              <tr>
+                <td><img style={photo} src="./img/food.jpg" alt="" /></td>
+                <td><img style={photo} src="./img/food1.jpg" alt="" /></td>
+                <td><img style={photo} src="./img/food2.jpg" alt="" /></td> 
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div style={righthalf}>
+          <div style={list}><b>Weinkeller</b></div>
+          <div style={list}>5 stars</div>
+          <div style={list}>opening hours</div>
+          <div style={list}>(123) 767-1234</div>
         </div>
 
-        <div style={info}>
-          <div style={name}>Weinkeller</div>
-          <div style={rating}>5 stars</div>
-          <div style={opening}>opening hours</div>
-          <div style={phone}>(123) 767-1234</div>
-        </div>
-
-        <div style={bar}>
-          <div>
-            <a style={url} href="yelp.ca">yelp.ca</a>
-            <div style={arrow}>▶</div>
+        <div>
+          <div className="col-md-9" style={arrow}>&nbsp;</div>
+          <div className="col-md-3" style={arrow}>
+            <a href="http://www.yelp.ca/biz/weinkeller-niagara-falls?hrid=K1TvWu8P5sz99KMrtbemfg" target="blank">yelp.ca &nbsp; ▶</a>
           </div>
         </div>
       </div>
