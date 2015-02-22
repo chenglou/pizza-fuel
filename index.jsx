@@ -5,6 +5,7 @@ var Yelp = React.createClass({
       width: '100%',
       height: 180,
       border: '1px solid rgba(0, 0, 0, .08)',
+      borderRadius: '5px',
       backgroundColor: '#f6f7f8',
     };
 
