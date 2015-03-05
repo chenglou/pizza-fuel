@@ -15,6 +15,7 @@ var Yelp = React.createClass({displayName: "Yelp",
       float: 'right',
       width: '40%',
       textAlign: 'right',
+      paddingTop: 7,
     };
 
     var info = {
@@ -47,8 +48,7 @@ var Yelp = React.createClass({displayName: "Yelp",
     };
 
     var righthalf = {
-      minWidth: '40%',
-      maxWidth: '100%',
+      width: '40%',
       // padding: '10px',
       height: 150,
       position: 'relative',
