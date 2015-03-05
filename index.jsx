@@ -13,7 +13,7 @@ var Yelp = React.createClass({
       borderTop: '1px solid #ccc',
       position: 'relative',
       float: 'right',
-      width: '40%',   
+      width: '40%',
       textAlign: 'right',
     };
 
@@ -72,7 +72,7 @@ var Yelp = React.createClass({
               {
                 this.props.img.map(function(image) {
                   return (
-                    <td><img style={photo} src={image} alt="" /></td>              
+                    <td><img style={photo} src={image} alt="" /></td>
                   );
                 })
               }
@@ -88,8 +88,8 @@ var Yelp = React.createClass({
         </div>
 
         <div>
-         <div style={arrow}>
-            <a href={this.props.link} target="blank">{this.props.tab} &nbsp; ▶</a>
+          <div style={arrow}>
+            <a href={this.props.link} target="blank">{this.props.tab} ▶</a>
           </div>
         </div>
       </div>
@@ -126,26 +126,26 @@ var Main = React.createClass({
   render: function() {
     var foodImages = ['./img/food.jpg', './img/food1.jpg', './img/food2.jpg'];
     var bookImages = ['./img/book.jpg', './img/book1.jpg'];
-    
+
+        // <Embedded />
+
+        // <Yelp line1="Three Day Road"
+        //       line2="by Joseph Boyden"
+        //       line3="5 Stars"
+        //       line4="CDN$ 14.44 Paperback"
+        //       img={bookImages}
+        //       link="http://www.amazon.ca/Three-Day-Road-Joseph-Boyden/dp/0143056956/ref=sr_1_1?s=books&ie=UTF8&qid=1424562138&sr=1-1&keywords=Three+day+road"
+        //       tab="amazon.ca" />
     return (
       <div>
-        <Yelp line1="Weinkeller" 
-              line2="5 stars" 
-              line3="Opening hours" 
-              line4="(123) 767-1234" 
+        <Yelp line1="Weinkeller"
+              line2="5 stars"
+              line3="Opening hours"
+              line4="(123) 767-1234"
               img={foodImages}
               link="http://www.yelp.ca/biz/weinkeller-niagara-falls?hrid=K1TvWu8P5sz99KMrtbemfg"
               tab="yelp.ca" />
-        <Embedded />
 
-        <Yelp line1="Three Day Road" 
-              line2="by Joseph Boyden" 
-              line3="5 Stars" 
-              line4="CDN$ 14.44 Paperback" 
-              img={bookImages}
-              link="http://www.amazon.ca/Three-Day-Road-Joseph-Boyden/dp/0143056956/ref=sr_1_1?s=books&ie=UTF8&qid=1424562138&sr=1-1&keywords=Three+day+road" 
-              tab="amazon.ca" />
-        
       </div>
     );
   }
